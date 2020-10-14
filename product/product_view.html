@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!--goolge webfont-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--css-->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>food truck</title>
+</head>
+<body>
+    <!--wrap {-->
+    <div class="wrap">
+        <!--bg call-->
+        <div class="modal_background"></div>
+        <div class="header_wrap dw_576px">
+            <header>
+                <div class="h_left"><a href="../index.html" class="t_center"><img src="../images/logo.png" alt="food truck logo"></a></div>
+                <div class="h_right">
+                    <a href="#"><img src="../images/cart_icon.png" alt="cart icon image"></a>
+                    <img id="menu_btn" class="cursor_p" src="../images/menu.png" alt="menu icon">
+                </div>
+            </header>
+        </div>
+
+        <aside>
+            <div class="close_btn cursor_p"><img src="../images/close_btn.png" alt="close btn"></div>
+            <ul>
+                <li><a href="#">푸드트럭소개</a></li>
+                <li><a href="#">신메뉴</a></li>
+                <li><a href="#">전체메뉴</a></li>
+                <li><a href="#">소식/이벤트</a></li>
+                <li><a href="#">창업안내</a></li>
+            </ul>
+        </aside>
+
+        <!--contents {-->
+        <section class="contents pro_contents">
+           <div class="c_top">
+               <img src="../images/steak_view.png" alt="steak image">
+           </div>
+
+           <div class="pro_txt">
+                <h2>
+                    <p>소고기 스테이크</p>
+                    <p class="fw_bold"><span>8,000</span>원</p>
+                </h2>
+
+                <div class="option">
+                    <p class="f23 fw_bold mb30px">추가 옵션</p>
+                    <div class="mb30px">
+                        <p class="f23">매장주문</p>
+                        <p class="f25 fw_bold"><span>0</span>원 <input type="radio" checked></p>
+                    </div>
+
+                    <div>
+                        <p class="f23">포장하기</p>
+                        <p class="f25 fw_bold"><span>0</span>원 <input type="radio"></p>
+                    </div>
+                </div>
+                
+                <div class="pro_mount">
+                    <p class="f23">수량</p>
+                    <div class="count_box over_hidden">
+                        <div class="count_input over_hidden"> 
+                            <input type="button" value="-" id="minus">
+                            <input type="text" id="cnt" name="amount[]" class="cnt_input" value="1" readonly="">
+                            <input type="button" id="plus" value="+">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="total_price">
+                    <ul>
+                        <li class="f28 fw_bold">총 주문금액</li>
+                        <li class="f28 fw_bold"><span>8,000</span>원</li>
+                    </ul>
+                </div>
+
+                <div class="protxt_bottom">
+                    <div class="cart_submit"><a href="#" class="f25">장바구니 담기</a></div>
+                    <div class="order_submit"><a href="#" class="f25">주문하기</a></div>
+                </div>
+            </div>
+        </section>
+        <!--} contents-->
+
+        <!--footer {-->
+        <footer>
+            <div class="ft_wrap dw_576px">
+                <div class="ft_top">
+                    <ul>
+                        <li class="t_center">CS / 고객센터</li>
+                        <li class="t_center">서비스 이용약관</li>
+                        <li class="t_center">개인정보처리방침</li>
+                    </ul>
+                </div>
+
+                <div class="ft_bottom">
+                    <ul>
+                        <li><strong>푸드트럭스테이크</strong> &nbsp; 대표이사 김푸드</li>
+                        <li>주소: 경기도 광명시 오리로길 619번길 11 (하안동 232번지) 예원빌딩</li>
+                        <li>팩스 : 02-897-8952 개인정보 보호책임자 : 김푸드</li>
+                        <li>Copyright © 2020 푸드트럭. All Rights Reserved.</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--} footer-->
+    </div>
+    <!--} wrap-->
+</body>
+</html>

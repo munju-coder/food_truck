@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!--goolge webfont-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--css-->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>food truck</title>
+</head>
+<body>
+    <!--wrap {-->
+    <div class="wrap">
+        <!--bg call-->
+        <div class="modal_background"></div>
+        <div class="header_wrap dw_576px">
+            <header>
+                <div class="h_left"><a href="../index.html" class="t_center"><img src="../images/logo.png" alt="food truck logo"></a></div>
+                <div class="h_right">
+                    <a href="#"><img src="../images/cart_icon.png" alt="cart icon image"></a>
+                    <img id="menu_btn" class="cursor_p" src="../images/menu.png" alt="menu icon">
+                </div>
+            </header>
+        </div>
+
+        <aside>
+            <div class="close_btn cursor_p"><img src="../images/close_btn.png" alt="close btn"></div>
+            <ul>
+                <li><a href="#">푸드트럭소개</a></li>
+                <li><a href="#">신메뉴</a></li>
+                <li><a href="#">전체메뉴</a></li>
+                <li><a href="#">소식/이벤트</a></li>
+                <li><a href="#">창업안내</a></li>
+            </ul>
+        </aside>
+        
+        <style>
+            .wrap .order_contents .order_top h2 { font-size: 40px; margin-bottom: 30px; }
+
+.wrap .order_contents .order_middle div { color: white; }
+.wrap .order_contents .order_middle div a { color: white; }
+.wrap .order_contents .order_middle .order_state { background-color: #00de8d; padding: 17px 10px; margin-top: 30px; margin-bottom: 50px;  }
+.wrap .order_contents .order_middle .menu_more { background-color: #043543; padding: 10px; margin-bottom: 50px; }
+
+.wrap .order_contents .order_top .state_number .ot_top { background-color: #043543; padding: 10px; color: white; }
+.wrap .order_contents .order_top .state_number .ot_top li { float: left; width: 50%; text-align: center; }
+.wrap .order_contents .order_top .state_number .ot_top::after { content: ''; display: block; overflow: hidden; clear: both; }
+
+.wrap .order_contents .order_top .state_number .ot_middle { background-color: #f7f7f7; padding: 30px 0; }
+.wrap .order_contents .order_top .state_number .ot_middle li { font-size: 50px; float: left; width: 50%; }
+.wrap .order_contents .order_top .state_number .ot_middle li:first-child { border-right: 1px solid #ddd; }
+.wrap .order_contents .order_top .state_number .ot_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
+
+.wrap .order_contents .total_price { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; background-color: #f7f7f7; padding: 20px 32px; }
+.wrap .order_contents .total_price ul li { float: left; }
+.wrap .order_contents .total_price ul li:last-child { float: right; }
+.wrap .order_contents .total_price ul::after { content: ''; display: block; overflow: hidden; clear: both; }
+
+.wrap .order_contents .state_order { margin-bottom: 40px; }
+.wrap .order_contents .state_order .sto_top { border: 1px solid #00de8d; }
+.wrap .order_contents .state_order .sto_bottom { margin-top: -19px; margin-left: 80px; }
+.wrap .order_contents .state_order .sto_bottom ul { float: left; width: 30%; }
+.wrap .order_contents .state_order .sto_bottom::after { content: ''; display: block; overflow: hidden; clear: both; }
+.wrap .order_contents .state_order .sto_bottom ul li { margin-bottom: 10px; text-align: center; color: #a8a8a8; }
+.wrap .order_contents .state_order .sto_bottom ul li:first-child #circle { width: 50px; height: 50px; background-color: white; border-radius: 50px; border: 10px solid #043543; overflow: hidden; margin-left: 40px; }
+.wrap .order_contents .state_order .sto_bottom ul li span { color: #a8a8a8; }
+.wrap .order_contents .state_order .sto_bottom ul:first-child li:nth-child(2) { color: #043543; font-weight: 600; }
+
+.wrap .order_contents .order_check ul { margin-bottom: 20px; }
+.wrap .order_contents .order_check ul li { float: left; }
+.wrap .order_contents .order_check ul li ol li { float: none; }
+.wrap .order_contents .order_check ul li ol li:last-child { color: #a8a8a8; }
+.wrap .order_contents .order_check ul .pro_chk_price { float: right; }
+.wrap .order_contents .order_check ul::after { content: ''; display: block; overflow: hidden; clear: both; }
+        </style>
+        <!--contents {-->
+        <section class="contents order_contents">
+            <form action="" class="order_state_form">
+                <div class="order_top mlr_32px t_center">
+                    <p class="f30 mb20px">잠시만 기다려주세요.</p>
+                    <div class="state_number">
+                        <ul class="ot_top">
+                            <li class="f25">대기번호</li>
+                            <li class="f25">테이블 번호</li>
+                        </ul>
+
+                        <ul class="ot_middle">
+                            <li class="fw_bold t_center">05</li>
+                            <li class="fw_bold t_center">02</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="state_order">
+                    <div class="t_center sto_top"></div>
+                    <div class="sto_bottom">
+                        <ul>
+                            <li><img src="../images/circle.png" alt=""></li>
+                            <li class="f25">주문완료</li>
+                            <li class="f25"><span class="order_time">16:58</span></li>
+                        </ul>
+
+                        <ul>
+                            <li><img src="../images/circle_before.png" alt=""></li>
+                            <li class="f25">접수완료</li>
+                            <li class="f25"><span class="order_time"></span></li>
+                        </ul>
+
+                        <ul>
+                            <li><img src="../images/circle_before.png" alt=""></li>
+                            <li class="f25">처리완료</li>
+                            <li class="f25"><span class="order_time"></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="order_check mlr_32px">
+                    <ul>
+                        <li>
+                            <ol>
+                                <li class="f25">플레인아이스크림</li>
+                                <li class="f25">옵션/매장</li>
+                            </ol>
+                        </li>
+                        <li class="f25 fw_bold pro_chk_price"><span>2,000</span>원 / <span class="pro_cnt">1</span></li>
+                    </ul>
+                </div>
+
+                <div class="total_price">
+                    <ul>
+                        <li class="f28 fw_bold">총주문금액</li>
+                        <li class="f28 smart_f_color fw_bold"><span>2,000</span>원</li>
+                    </ul>
+                </div>
+
+                <div class="order_middle mlr_32px t_center">
+                    <div class="order_state f25 cursor_pointer">취소요청</div>
+                </div>
+            </form>
+        </section>
+        <!--} contents-->
+
+        <!--footer {-->
+        <footer>
+            <div class="ft_wrap dw_576px">
+                <div class="ft_top">
+                    <ul>
+                        <li class="t_center">CS / 고객센터</li>
+                        <li class="t_center">서비스 이용약관</li>
+                        <li class="t_center">개인정보처리방침</li>
+                    </ul>
+                </div>
+
+                <div class="ft_bottom">
+                    <ul>
+                        <li><strong>푸드트럭스테이크</strong> &nbsp; 대표이사 김푸드</li>
+                        <li>주소: 경기도 광명시 오리로길 619번길 11 (하안동 232번지) 예원빌딩</li>
+                        <li>팩스 : 02-897-8952 개인정보 보호책임자 : 김푸드</li>
+                        <li>Copyright © 2020 푸드트럭. All Rights Reserved.</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--} footer-->
+    </div>
+    <!--} wrap-->
+</body>
+</html>

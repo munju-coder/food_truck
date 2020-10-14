@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../food_truck/js/main.js"></script>
+    <!--goolge webfont-->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--css-->
+    <link rel="stylesheet" href="../food_truck/css/reset.css">
+    <link rel="stylesheet" href="../food_truck/css/grid.css">
+    <link rel="stylesheet" href="../food_truck/css/style.css">
+    <title>food truck</title>
+</head>
+<body>
+    <!--wrap {-->
+    <div class="wrap">
+        <!--bg call-->
+        <div class="modal_background"></div>
+        <div class="header_wrap dw_576px">
+            <header>
+                <div class="h_left"><a href="index.html" class="t_center"><img src="../food_truck/images/logo.png" alt="food truck logo"></a></div>
+                <div class="h_right">
+                    <a href="../food_truck/cart/cart.html"><img src="../food_truck/images/cart_icon.png" alt="cart icon image"></a>
+                    <img id="menu_btn" class="cursor_p" src="../food_truck/images/menu.png" alt="menu icon">
+                </div>
+            </header>
+        </div>
+
+        <aside>
+            <div class="close_btn cursor_p"><img src="../food_truck/images/close_btn.png" alt="close btn"></div>
+            <ul>
+                <li><a href="#">푸드트럭소개</a></li>
+                <li><a href="#">신메뉴</a></li>
+                <li><a href="#">전체메뉴</a></li>
+                <li><a href="#">소식/이벤트</a></li>
+                <li><a href="#">창업안내</a></li>
+            </ul>
+        </aside>
+        
+        <!--contents {-->
+        <section class="contents">
+            <!--c_top {-->
+            <div class="c_top">
+                <div class="ct_top"><img src="../food_truck/images/main_banner.png" alt="steak image"></div>
+                
+                <div class="ct_bottom">
+                    <div class="c_menu">
+                        <ul class="cursor_p">
+                            <li class="mb10px"><img src="../food_truck/images/menu_icon.png" alt="menu intro icon"></li>
+                            <li>메뉴소개</li>
+                        </ul>
+
+                        <ul class="cursor_p">
+                            <li class="mb10px"><img src="../food_truck/images/coupon_icon.png" alt="coupon icon"></li>
+                            <li>할인 혜택</li>
+                        </ul>
+
+                        <ul class="cursor_p">
+                            <li class="mb10px"><img src="../food_truck/images/instargram_icon.png" alt="instargram icon"></li>
+                            <li>인스타그램 후기</li>
+                        </ul>
+
+                        <ul class="cursor_p">
+                            <li class="mb10px"><img src="../food_truck/images/info_icon.png" alt="information icon"></li>
+                            <li>이벤트 공지</li>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--} c_top-->
+
+            <!--c_middle {-->
+            <div class="c_middle">
+                <div class="cm_top dw_576px">
+                    <div class="tab t_center">
+                        <button class="tablinks" tab_name="tab1">추천메뉴</button>
+                        <button class="tablinks bg_active" tab_name="tab2">스테이크</button>
+                        <button class="tablinks" tab_name="tab3">핫도그</button>
+                        <button class="tablinks" tab_name="tab4">타코/브리또</button>
+                    </div>
+
+                    <div class="tabcontent" id="tab1">
+                        <a href="../food_truck/product/product_view.html">
+                            <div class="pro_box">
+                                <img src="../food_truck/images/steak_3.png" alt="steak image">
+                                <ul>
+                                    <li class="f20">소고기 스테이크</li>
+                                    <li class="fw_bold f27"><span>8,000</span>원</li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/taco_2.png" alt="taco image">
+                            <ul>
+                                <li class="f20">불고기 타코</li>
+                                <li class="fw_bold f27"><span>8,500</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/steak_5.png" alt="steak image">
+                            <ul>
+                                <li class="f20">하와이안 스테이크</li>
+                                <li class="fw_bold f27"><span>9,500</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/taco_1.png" alt="brito image">
+                            <ul>
+                                <li class="f20">불고기 브리또</li>
+                                <li class="fw_bold f27"><span>9,000</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/hotdog_3.png" alt="hotdog image">
+                            <ul>
+                                <li class="f20">치킨 핫도그</li>
+                                <li class="fw_bold f27"><span>8,000</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/taco_3.png" alt="taco image">
+                            <ul>
+                                <li class="f20">쉬림프 타코</li>
+                                <li class="fw_bold f27"><span>8,000</span>원</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tabcontent tab_active" id="tab2">
+                        <a href="../food_truck/product/product_view.html">
+                            <div class="pro_box">
+                                <img src="../food_truck/images/steak_1.png" alt="steak image">
+                                <ul>
+                                    <li class="f20">허니버터 쉬림프 스테이크</li>
+                                    <li class="fw_bold f27"><span>8,500</span>원</li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/steak_2.png" alt="steak image">
+                            <ul>
+                                <li class="f20">통베이컨 쉬림프 스테이크</li>
+                                <li class="fw_bold f27"><span>8,000</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/steak_3.png" alt="steak image">
+                            <ul>
+                                <li class="f20">소고기 스테이크</li>
+                                <li class="fw_bold f27"><span>8,000</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/steak_4.png" alt="steak image">
+                            <ul>
+                                <li class="f20">소고기 통베이컨 스테이크</li>
+                                <li class="fw_bold f27"><span>9,000</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/steak_5.png" alt="steak image">
+                            <ul>
+                                <li class="f20">하와이안 스테이크</li>
+                                <li class="fw_bold f27"><span>9,500</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/steak_6.png" alt="steak image">
+                            <ul>
+                                <li class="f20">돼지 통 베이컨 스테이크</li>
+                                <li class="fw_bold f27"><span>7,000</span>원</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tabcontent" id="tab3">
+                        <a href="../food_truck/product/product_view.html">
+                            <div class="pro_box">
+                                <img src="../food_truck/images/hotdog_4.png" alt="hotdog image">
+                                <ul>
+                                    <li class="f20">오리지널 핫도그</li>
+                                    <li class="fw_bold f27"><span>9,000</span>원</li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/hotdog_1.png" alt="hotdog image">
+                            <ul>
+                                <li class="f20">베이컨 치킨핫도그</li>
+                                <li class="fw_bold f27"><span>8,500</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/hotdog_3.png" alt="hotdog image">
+                            <ul>
+                                <li class="f20">베이컨 핫도그</li>
+                                <li class="fw_bold f27"><span>8,000</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/hotdog_3.png" alt="hotdog image">
+                            <ul>
+                                <li class="f20">치킨 핫도그</li>
+                                <li class="fw_bold f27"><span>8,000</span>원</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tabcontent" id="tab4">
+                        <a href="../food_truck/product/product_view.html">
+                            <div class="pro_box">
+                                <img src="../food_truck/images/taco_1.png" alt="brito image">
+                                <ul>
+                                    <li class="f20">불고기 브리또</li>
+                                    <li class="fw_bold f27"><span>9,000</span>원</li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/taco_2.png" alt="taco image">
+                            <ul>
+                                <li class="f20">불고기 타코</li>
+                                <li class="fw_bold f27"><span>8,500</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/taco_3.png" alt="taco image">
+                            <ul>
+                                <li class="f20">쉬림프 타코</li>
+                                <li class="fw_bold f27"><span>8,000</span>원</li>
+                            </ul>
+                        </div>
+
+                        <div class="pro_box">
+                            <img src="../food_truck/images/taco_4.png" alt="taco image">
+                            <ul>
+                                <li class="f20">치킨 타코</li>
+                                <li class="fw_bold f27"><span>8,000</span>원</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--} c_middle-->
+            
+            <!--c_bottom {-->
+            <div class="c_bottom">
+                <div class="cb_top">
+                    <h2>단체 주문/케이터링 서비스</h2>
+                    <img src="../food_truck/images/bottom_banner.png" alt="serivce banner image">
+                </div>
+                
+                <div class="cb_bottom">
+                    <ul class="t_center">
+                        <li><img src="../food_truck/images/truck_icon.png" alt="truck icon"></li>
+                        <li><p>특별한날, 푸드트럭스테이크와 함께 즐거움을 나누세요</p></li>
+                    </ul>
+                </div>
+            </div>
+            <!--} c_bottom-->
+        </section>
+        <!--} contents-->
+
+        <!--footer {-->
+        <footer>
+            <div class="ft_wrap dw_576px">
+                <div class="ft_top">
+                    <ul>
+                        <li class="t_center">CS / 고객센터</li>
+                        <li class="t_center">서비스 이용약관</li>
+                        <li class="t_center">개인정보처리방침</li>
+                    </ul>
+                </div>
+
+                <div class="ft_bottom">
+                    <ul>
+                        <li><strong>푸드트럭스테이크</strong> &nbsp; 대표이사 김푸드</li>
+                        <li>주소: 경기도 광명시 오리로길 619번길 11 (하안동 232번지) 예원빌딩</li>
+                        <li>팩스 : 02-897-8952 개인정보 보호책임자 : 김푸드</li>
+                        <li>Copyright © 2020 푸드트럭. All Rights Reserved.</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!--} footer-->
+    </div>
+    <!--} wrap-->
+</body>
+</html>

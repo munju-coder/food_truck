@@ -13,6 +13,7 @@ input { outline: none; }
 .mb10px { margin-bottom: 10px; }
 .mb30px { margin-bottom: 30px; }
 .mb20px { margin-bottom: 20px; }
+.mr34px { margin-right: 34px; }
 
 /*text-align*/
 .t_center { text-align: center; }
@@ -62,7 +63,7 @@ input { outline: none; }
 .wrap .contents .c_middle .cm_top .tabcontent .pro_box ul { text-align: center; }
 .wrap .contents .c_middle .cm_top .tabcontent .pro_box { background-color: white; float: left; width: 47%; padding: 20px; }
 .wrap .contents .c_middle .cm_top .tabcontent::after { content: ''; display: block; overflow: hidden; clear: both; }
-.wrap .contents .c_middle .cm_top .tabcontent .pro_box:nth-child(odd) { margin-right: 34px; margin-bottom: 34px; }
+.wrap .contents .c_middle .cm_top .tabcontent .pro_box:nth-child(odd) { /* margin-right: 34px; */ margin-bottom: 34px; }
 .wrap .contents .c_middle .cm_top .tabcontent .pro_box img { width: 100%; margin-bottom: 25px; }
 
 .wrap .contents .c_bottom .cb_top h2 { font-size: 35px; font-weight: 600; text-align: center; padding-top: 60px; margin-top: 0; margin-bottom: 30px; }

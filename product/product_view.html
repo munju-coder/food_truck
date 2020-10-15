@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/COMMON.js"></script>
     <script src="../js/main.js"></script>
     <!--goolge webfont-->
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,6 +15,13 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>food truck</title>
 </head>
+<script>
+    $(document).ready( function(){
+        $('.cart_submit').click( function(){
+            alert('장바구니에 담으시겠습니까?');
+        });
+    });
+</script>
 <body>
     <!--wrap {-->
     <div class="wrap">
@@ -49,19 +57,19 @@
            <div class="pro_txt">
                 <h2>
                     <p>소고기 스테이크</p>
-                    <p class="fw_bold"><span>8,000</span>원</p>
+                    <p class="fw_bold"><span id="pd_price">8,000</span>원</p>
                 </h2>
 
                 <div class="option">
                     <p class="f23 fw_bold mb30px">추가 옵션</p>
                     <div class="mb30px">
                         <p class="f23">매장주문</p>
-                        <p class="f25 fw_bold"><span>0</span>원 <input type="radio" checked></p>
+                        <p class="f25 fw_bold"><span id="option_price">1,000</span>원 <input type="radio" id="packing_chk_N" name="packing_chk" value="N" packing_price="0" checked></p>
                     </div>
 
                     <div>
                         <p class="f23">포장하기</p>
-                        <p class="f25 fw_bold"><span>0</span>원 <input type="radio"></p>
+                        <p class="f25 fw_bold"><span>0</span>원 <input type="radio" id="packing_chk_Y" name="packing_chk" value="Y" packing_price="0"></p>
                     </div>
                 </div>
                 
@@ -79,17 +87,75 @@
                 <div class="total_price">
                     <ul>
                         <li class="f28 fw_bold">총 주문금액</li>
-                        <li class="f28 fw_bold"><span>8,000</span>원</li>
+                        <li class="f28 fw_bold"><span id="total_price">8,000</span>원</li>
                     </ul>
                 </div>
 
                 <div class="protxt_bottom">
-                    <div class="cart_submit"><a href="#" class="f25">장바구니 담기</a></div>
-                    <div class="order_submit"><a href="#" class="f25">주문하기</a></div>
+                    <a href="../cart/cart.html" class="f25"><div class="cart_submit" id="cart_btn">장바구니 담기</div></a>
+                    <a href="../order/order_complete.html" class="f25"><div class="order_submit" id="order_btn">주문하기</div></a>
                 </div>
             </div>
         </section>
         <!--} contents-->
+
+        <script>
+            $(document).ready( function(){
+
+                var pd_price = parseInt(COMMON.form.str_num($("#pd_price").text()));    //상품가격
+                var packing_chk = $("input:radio[name=packing_chk]:checked").val();    // 포장여부
+                
+                var packing_price = parseInt(COMMON.form.str_num($("input:radio[name=packing_chk]:checked").attr("packing_price")));   //초기 설정값
+
+                var packing_price_N = parseInt(COMMON.form.str_num($("#packing_chk_N").attr("packing_price"))); //옵션 N일때의 값
+                var packing_price_Y = parseInt(COMMON.form.str_num($("#packing_chk_Y").attr("packing_price"))); //옵션 Y일때의 값
+
+                // var option = parseInt(COMMON.form.str_num($("#option_price").text())); //옵션가격
+
+                var total_price = parseInt(COMMON.form.str_num($("#total_price").text()));  //총가격
+                var amount = parseInt(COMMON.form.str_num($("#cnt").val()));    //수량
+
+
+                //라디오 버튼 클릭시 옵션 가격 변경
+                $("input:radio[name=packing_chk]").click(function(){
+                    packing_chk = $(this).val();
+                    packing_price = parseInt(COMMON.form.str_num($(this).attr("packing_price")));
+
+                    if(packing_chk == "Y"){
+                        total_price += packing_price_Y;
+                    }else {
+                        total_price -= (packing_price_Y + packing_price );
+                    }
+
+                    $("#total_price").text(COMMON.form.comma(total_price));
+                });
+
+                $("#plus").click(function(){
+                    // alert('s');
+                    amount += 1;
+                    total_price = pd_price * amount;
+
+                    if(packing_chk == "Y") {
+                        total_price += packing_price;
+                    }
+                    $("#cnt").val(amount);
+                    $("#total_price").text(COMMON.form.comma(total_price));
+                });
+
+                $("#minus").click(function(){
+                    amount -= 1;
+                    total_price = total_price - pd_price;
+                    if(amount < 1) {
+                        amount = 1;
+                        total_price = pd_price;
+                        alert("최소 구매수량은 1개입니다.");
+                        return false;
+                    }
+                    $("#cnt").val(amount);
+                    $("#total_price").text(COMMON.form.comma(total_price));
+                });
+            }); 
+        </script>
 
         <!--footer {-->
         <footer>

@@ -7,6 +7,7 @@ a:hover,a:active,a:visited ,a:link { text-decoration: none; }
 .over_hidden { overflow: hidden; }
 .wrap { width: 640px; overflow: hidden; margin: 0 auto; }
 .dw_576px { width: 100%; max-width: 576px; margin: 0 auto; }
+input { outline: none; }
 /*margin*/
 .mlr_32px { margin: 0 32px; }
 .mb10px { margin-bottom: 10px; }
@@ -24,6 +25,8 @@ a:hover,a:active,a:visited ,a:link { text-decoration: none; }
 .f25 { font-size: 25px; }
 .f27 { font-size: 27px; }
 .f28 { font-size: 28px; }
+.f30 { font-size: 30px; }
+
 .modal_background { display:none; position: absolute; top: 0; left: 0; width: 640px; height: 100%; background-color: rgba(0, 0, 0, 0.486); z-index: 10; }
 .wrap { position: relative; }
 .wrap .header_wrap { padding: 20px 0; }
@@ -60,7 +63,7 @@ a:hover,a:active,a:visited ,a:link { text-decoration: none; }
 .wrap .contents .c_middle .cm_top .tabcontent .pro_box { background-color: white; float: left; width: 47%; padding: 20px; }
 .wrap .contents .c_middle .cm_top .tabcontent::after { content: ''; display: block; overflow: hidden; clear: both; }
 .wrap .contents .c_middle .cm_top .tabcontent .pro_box:nth-child(odd) { margin-right: 34px; margin-bottom: 34px; }
-.wrap .contents .c_middle .cm_top .tabcontent .pro_box img { width: 100%; }
+.wrap .contents .c_middle .cm_top .tabcontent .pro_box img { width: 100%; margin-bottom: 25px; }
 
 .wrap .contents .c_bottom .cb_top h2 { font-size: 35px; font-weight: 600; text-align: center; padding-top: 60px; margin-top: 0; margin-bottom: 30px; }
 .wrap .contents .c_bottom .cb_top { overflow: hidden; line-height: 0; }
@@ -127,6 +130,7 @@ a:hover,a:active,a:visited ,a:link { text-decoration: none; }
 .wrap .pro_contents .cart_txt .cartxt_top .cart_box::after { content: ''; display: block; overflow: hidden; clear: both; }
 .wrap .pro_contents .cart_txt .cartxt_top .cart_box ul li button { border: none; margin-top: 20px; padding: 5px 15px; background-color: #6d6d6d; color: white; }
 .wrap .pro_contents .pro_txt .menu_add { background-color: #2f2d38; color: white; padding: 15px 0; margin-bottom: 20px; margin-right: 32px; margin-left: 32px; }
+.wrap .pro_contents .pro_txt .menu_add a { color: white; }
 .wrap .pro_contents .pro_txt .total_price { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; background-color: #f7f7f7; padding: 20px 32px; }
 .wrap .pro_contents .pro_txt .total_price ul li { float: left; }
 .wrap .pro_contents .pro_txt .total_price ul li:last-child { float: right; }
@@ -138,9 +142,40 @@ a:hover,a:active,a:visited ,a:link { text-decoration: none; }
 .wrap .pro_contents .pro_txt .protxt_bottom .cart_submit { background-color: #2f2d38; margin-right: 10px;  color: white; }
 .wrap .pro_contents .pro_txt .protxt_bottom .order_submit { background-color:  #fabe00; color: white; }
 
-/*order_complete*/
+/*order_complete , order_state*/
 .wrap .order_contents .order_top { border-top: 1px solid #ddd; padding-top: 140px; margin-bottom: 130px; }
 .wrap .order_contents .order_top h2 { font-size: 40px; margin-bottom: 30px; }
+.wrap .order_contents .order_top .state_number .sn_top { background-color: #fabe00; padding: 10px; color: white; }
+.wrap .order_contents .order_top .state_number .sn_top li { float: left; width: 50%; text-align: center; }
+.wrap .order_contents .order_top .state_number .sn_top::after { content: ''; display: block; overflow: hidden; clear: both; }
+.wrap .order_contents .order_top .state_number .sn_middle { background-color: #f7f7f7; padding: 30px 0; }
+.wrap .order_contents .order_top .state_number .sn_middle li { font-size: 50px; float: left; width: 50%; color: #2f2d38; }
+.wrap .order_contents .order_top .state_number .sn_middle li:first-child { border-right: 1px solid #ddd; }
+.wrap .order_contents .order_top .state_number .sn_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
+
 .wrap .order_contents .order_middle div a { color: white; }
 .wrap .order_contents .order_middle .order_state { background-color: #2f2d38; padding: 20px; margin-bottom: 20px; color: white;  }
-.wrap .order_contents .order_middle .menu_more { background-color:  #fabe00; padding: 20px; margin-bottom: 50px; color: white; }
+.wrap .order_contents .order_middle .cancel_btn { margin-top: 30px; margin-bottom: 50px; background-color: #2f2d38; color: white; padding: 20px; }
+.wrap .order_contents .order_middle .menu_more { background-color: #fabe00; padding: 20px; margin-bottom: 50px; color: white; }
+
+.wrap .order_contents .total_price { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; background-color: #f7f7f7; padding: 20px 32px; }
+.wrap .order_contents .total_price ul li { float: left; }
+.wrap .order_contents .total_price ul li:last-child { float: right; }
+.wrap .order_contents .total_price ul::after { content: ''; display: block; overflow: hidden; clear: both; }
+
+.wrap .order_contents .state_order { margin-bottom: 40px; }
+.wrap .order_contents .state_order .sto_top { border: 1px solid #fabe00; }
+.wrap .order_contents .state_order .sto_bottom { margin-top: -19px; margin-left: 80px; }
+.wrap .order_contents .state_order .sto_bottom ul { float: left; width: 30%; }
+.wrap .order_contents .state_order .sto_bottom::after { content: ''; display: block; overflow: hidden; clear: both; }
+.wrap .order_contents .state_order .sto_bottom ul li { margin-bottom: 10px; text-align: center; color: #a8a8a8; }
+.wrap .order_contents .state_order .sto_bottom ul li:first-child #circle { width: 50px; height: 50px; background-color: white; border-radius: 50px; border: 10px solid #043543; overflow: hidden; margin-left: 40px; }
+.wrap .order_contents .state_order .sto_bottom ul li span { color: #a8a8a8; }
+.wrap .order_contents .state_order .sto_bottom ul:first-child li:nth-child(2) { color: #2f2d38; font-weight: 600; }
+
+.wrap .order_contents .order_check ul { margin-bottom: 20px; }
+.wrap .order_contents .order_check ul li { float: left; }
+.wrap .order_contents .order_check ul li ol li { float: none; }
+.wrap .order_contents .order_check ul li ol li:last-child { color: #a8a8a8; }
+.wrap .order_contents .order_check ul .pro_chk_price { float: right; }
+.wrap .order_contents .order_check ul::after { content: ''; display: block; overflow: hidden; clear: both; }

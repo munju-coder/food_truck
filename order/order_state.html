@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>food truck</title>
 </head>
+<script>
+    $(document).ready( function(){
+        $('.cancel_btn').click( function(){
+            alert('취소하시겠습니까?');
+        });
+    });
+</script>
 <body>
     <!--wrap {-->
     <div class="wrap">
@@ -40,57 +47,18 @@
             </ul>
         </aside>
         
-        <style>
-            .wrap .order_contents .order_top h2 { font-size: 40px; margin-bottom: 30px; }
-
-.wrap .order_contents .order_middle div { color: white; }
-.wrap .order_contents .order_middle div a { color: white; }
-.wrap .order_contents .order_middle .order_state { background-color: #00de8d; padding: 17px 10px; margin-top: 30px; margin-bottom: 50px;  }
-.wrap .order_contents .order_middle .menu_more { background-color: #043543; padding: 10px; margin-bottom: 50px; }
-
-.wrap .order_contents .order_top .state_number .ot_top { background-color: #043543; padding: 10px; color: white; }
-.wrap .order_contents .order_top .state_number .ot_top li { float: left; width: 50%; text-align: center; }
-.wrap .order_contents .order_top .state_number .ot_top::after { content: ''; display: block; overflow: hidden; clear: both; }
-
-.wrap .order_contents .order_top .state_number .ot_middle { background-color: #f7f7f7; padding: 30px 0; }
-.wrap .order_contents .order_top .state_number .ot_middle li { font-size: 50px; float: left; width: 50%; }
-.wrap .order_contents .order_top .state_number .ot_middle li:first-child { border-right: 1px solid #ddd; }
-.wrap .order_contents .order_top .state_number .ot_middle::after { content: ''; display: block; overflow: hidden; clear: both; }
-
-.wrap .order_contents .total_price { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; background-color: #f7f7f7; padding: 20px 32px; }
-.wrap .order_contents .total_price ul li { float: left; }
-.wrap .order_contents .total_price ul li:last-child { float: right; }
-.wrap .order_contents .total_price ul::after { content: ''; display: block; overflow: hidden; clear: both; }
-
-.wrap .order_contents .state_order { margin-bottom: 40px; }
-.wrap .order_contents .state_order .sto_top { border: 1px solid #00de8d; }
-.wrap .order_contents .state_order .sto_bottom { margin-top: -19px; margin-left: 80px; }
-.wrap .order_contents .state_order .sto_bottom ul { float: left; width: 30%; }
-.wrap .order_contents .state_order .sto_bottom::after { content: ''; display: block; overflow: hidden; clear: both; }
-.wrap .order_contents .state_order .sto_bottom ul li { margin-bottom: 10px; text-align: center; color: #a8a8a8; }
-.wrap .order_contents .state_order .sto_bottom ul li:first-child #circle { width: 50px; height: 50px; background-color: white; border-radius: 50px; border: 10px solid #043543; overflow: hidden; margin-left: 40px; }
-.wrap .order_contents .state_order .sto_bottom ul li span { color: #a8a8a8; }
-.wrap .order_contents .state_order .sto_bottom ul:first-child li:nth-child(2) { color: #043543; font-weight: 600; }
-
-.wrap .order_contents .order_check ul { margin-bottom: 20px; }
-.wrap .order_contents .order_check ul li { float: left; }
-.wrap .order_contents .order_check ul li ol li { float: none; }
-.wrap .order_contents .order_check ul li ol li:last-child { color: #a8a8a8; }
-.wrap .order_contents .order_check ul .pro_chk_price { float: right; }
-.wrap .order_contents .order_check ul::after { content: ''; display: block; overflow: hidden; clear: both; }
-        </style>
         <!--contents {-->
         <section class="contents order_contents">
             <form action="" class="order_state_form">
-                <div class="order_top mlr_32px t_center">
+                <div class="order_top t_center">
                     <p class="f30 mb20px">잠시만 기다려주세요.</p>
                     <div class="state_number">
-                        <ul class="ot_top">
+                        <ul class="sn_top">
                             <li class="f25">대기번호</li>
                             <li class="f25">테이블 번호</li>
                         </ul>
 
-                        <ul class="ot_middle">
+                        <ul class="sn_middle">
                             <li class="fw_bold t_center">05</li>
                             <li class="fw_bold t_center">02</li>
                         </ul>
@@ -120,27 +88,27 @@
                     </div>
                 </div>
 
-                <div class="order_check mlr_32px">
+                <div class="order_check">
                     <ul>
                         <li>
                             <ol>
-                                <li class="f25">플레인아이스크림</li>
+                                <li class="f25">소고기 스테이크</li>
                                 <li class="f25">옵션/매장</li>
                             </ol>
                         </li>
-                        <li class="f25 fw_bold pro_chk_price"><span>2,000</span>원 / <span class="pro_cnt">1</span></li>
+                        <li class="f25 fw_bold pro_chk_price"><span>8,000</span>원 / <span class="pro_cnt">1</span></li>
                     </ul>
                 </div>
 
                 <div class="total_price">
                     <ul>
                         <li class="f28 fw_bold">총주문금액</li>
-                        <li class="f28 smart_f_color fw_bold"><span>2,000</span>원</li>
+                        <li class="f28 smart_f_color fw_bold"><span>8,000</span>원</li>
                     </ul>
                 </div>
 
-                <div class="order_middle mlr_32px t_center">
-                    <div class="order_state f25 cursor_pointer">취소요청</div>
+                <div class="order_middle t_center">
+                    <div class="cancel_btn f25 cursor_p">취소요청</div>
                 </div>
             </form>
         </section>

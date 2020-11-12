@@ -29,6 +29,7 @@ input { outline: none; }
 .f30 { font-size: 30px; }
 
 .modal_background { display:none; position: absolute; top: 0; left: 0; width: 640px; height: 100%; background-color: rgba(0, 0, 0, 0.486); z-index: 10; }
+
 .wrap { position: relative; }
 .wrap .header_wrap { padding: 20px 0; }
 .wrap .header_wrap header div { float: left; }
@@ -37,7 +38,8 @@ input { outline: none; }
 .wrap .header_wrap header::after { content: ''; display: block; overflow: hidden; clear: both; }
 .wrap .header_wrap header .h_right img:first-child { margin-right: 20px; }
 
-.wrap aside { display: none; position: absolute; width: 477px; top: 0; right: 0; background-color: #2f2d38; opacity: 0.95; z-index: 20; }
+/* .wrap aside { display: none; position: absolute; width: 477px; top: 0; right: 0; background-color: #2f2d38; opacity: 0.95; z-index: 20; } */
+.wrap aside { width: 477px; position: absolute; width: 477px; top: 0; right: -520px; background-color: #2f2d38; opacity: 0.95; z-index: 20; transition: right .5s; }
 .wrap aside ul li { padding: 20px 0 20px 30px; border-bottom: 1px solid #ddd; }
 .wrap aside ul li:first-child { padding-top: 40px; }
 .wrap aside ul li:last-child { border-bottom: none; }
